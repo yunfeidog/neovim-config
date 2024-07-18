@@ -105,6 +105,16 @@ require("lazy").setup({
         -- or                              , branch = '0.1.1',
         dependencies = { "nvim-lua/plenary.nvim" },
     },
+    {
+        event = "VeryLazy",
+        "tpope/vim-fugitive",
+        cmd = "Git",
+        config = function()
+            -- convert
+            vim.cmd.cnoreabbrev([[git Git]])
+            vim.cmd.cnoreabbrev([[gp Git push]])
+        end,
+    },
 })
 
 
@@ -163,17 +173,6 @@ require("lspconfig").lua_ls.setup({
             diagnostics = {
                 -- Get the language server to recognize the `vim` global
                 globals = { "vim", "hs" },
-            },
-            workspace = {
-                checkThirdParty = false,
-                -- Make the server aware of Neovim runtime files
-                library = {
-                    vim.api.nvim_get_runtime_file("", true),
-                    "/Applications/Hammerspoon.app/Contents/Resources/extensions/hs/",
-                    vim.fn.expand("~/lualib/share/lua/5.4"),
-                    vim.fn.expand("~/lualib/lib/luarocks/rocks-5.4"),
-                    "/opt/homebrew/opt/openresty/lualib",
-                },
             },
             completion = {
                 callSnippet = "Replace",
