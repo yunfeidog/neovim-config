@@ -123,6 +123,10 @@ require("lazy").setup({
             require("gitsigns").setup()
         end,
     },
+    {
+        "rhysd/conflict-marker.vim",
+        event = "VeryLazy",
+    },
 })
 
 
