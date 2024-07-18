@@ -154,6 +154,13 @@ autocmd FileType nerdtree setlocal relativenumber
             "ryanoasis/vim-devicons",
         },
     },
+    {
+        "folke/persistence.nvim",
+        event = "BufReadPre", -- this will only start session saving when an actual file was opened
+        config = function()
+            require("persistence").setup()
+        end,
+    },
 })
 
 
@@ -326,3 +333,22 @@ cmp.setup.cmdline(":", {
     }),
 })
 -- =============================================================自动补全cmp的配置=============================================================
+
+
+
+-- =============================================================persistence的配置=============================================================
+
+
+local args = vim.api.nvim_get_vvar("argv")
+-- embed
+if #args > 2 then
+else
+    require("persistence").load({ last = true })
+end
+-- persistence on start
+vim.api.nvim_set_hl(0, "@lsp.type.variable.lua", { link = "Normal" })
+vim.api.nvim_set_hl(0, "Identifier", { link = "Normal" })
+vim.api.nvim_set_hl(0, "TSVariable", { link = "Normal" })
+
+
+-- =============================================================persistence的配置=============================================================
