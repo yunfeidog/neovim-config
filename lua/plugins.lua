@@ -127,6 +127,13 @@ require("lazy").setup({
         "rhysd/conflict-marker.vim",
         event = "VeryLazy",
     },
+    --tmux
+    {
+        "numToStr/Navigator.nvim",
+        config = function()
+            require("Navigator").setup()
+        end,
+    },
 })
 
 
