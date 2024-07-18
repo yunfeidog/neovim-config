@@ -161,6 +161,12 @@ autocmd FileType nerdtree setlocal relativenumber
             require("persistence").setup()
         end,
     },
+    {
+        "nvim-treesitter/nvim-treesitter",
+        config = function()
+            require("nvim-treesitter.configs").setup({})
+        end,
+    },
 })
 
 
