@@ -105,6 +105,7 @@ require("lazy").setup({
         -- or                              , branch = '0.1.1',
         dependencies = { "nvim-lua/plenary.nvim" },
     },
+    -- Git 配置插件
     {
         event = "VeryLazy",
         "tpope/vim-fugitive",
@@ -113,6 +114,13 @@ require("lazy").setup({
             -- convert
             vim.cmd.cnoreabbrev([[git Git]])
             vim.cmd.cnoreabbrev([[gp Git push]])
+        end,
+    },
+    {
+        event = "VeryLazy",
+        "lewis6991/gitsigns.nvim",
+        config = function()
+            require("gitsigns").setup()
         end,
     },
 })
