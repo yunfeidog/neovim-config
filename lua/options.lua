@@ -14,7 +14,7 @@ set.mouse = 'a'           --所有模式下都可以使用鼠标
 set.tabstop = 4   -- 这个选项设置 Tab 键在视觉上占用的空格数。
 set.softtabstop = 4 --这个选项设置编辑时 Tab 键插入的空格数。
 set.shiftwidth = 4 --这个选项设置自动缩进时使用的空格数。
-set.expandtab = 4 --这个选项将 Tab 键替换为相等数量的空格
+set.expandtab = true --这个选项将 Tab 键替换为相等数量的空格
 
 --search
 set.incsearch = true --输入关键字的时候就开始搜索

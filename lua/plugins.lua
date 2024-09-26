@@ -167,8 +167,13 @@ autocmd FileType nerdtree setlocal relativenumber
             require("nvim-treesitter.configs").setup({})
         end,
     },
+    {
+        "RRethy/nvim-base16",
+        lazy = true,
+    },
 })
 
+vim.cmd.colorscheme("base16-snazzy")
 
 
 -- =============================================================null-ls格式化的配置=============================================================
