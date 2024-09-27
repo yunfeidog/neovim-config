@@ -1,7 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-typedef struct node{
+typedef node{
+
+
+    int a="";
 
 }
 
@@ -11,3 +14,4 @@ int main(){
     cin>>a; 
     cout<<a<<endl;
 }
+

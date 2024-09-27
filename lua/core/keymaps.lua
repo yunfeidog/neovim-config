@@ -15,6 +15,7 @@ vim.g.mapleader = " " --leader键为空格，每次使用先按空格
 --vim.keymap.set("n", "<C-k>", "<C-w>k", opt)     -- ctrl+w+k --> 替换为ctrl+k ,移动到上侧的屏幕
 
 
+
 -- Navigator插件快捷键
 vim.keymap.set({ "n", "t" }, "<C-h>", "<CMD>NavigatorLeft<CR>")
 vim.keymap.set({ "n", "t" }, "<C-l>", "<CMD>NavigatorRight<CR>")
@@ -41,3 +42,13 @@ vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', opt)
 -- 如果有计数前缀,则移动物理行;如果没有计数前缀,则移动屏幕行。这可以提高在长行文本中的导航体验。
 vim.keymap.set("n", "j", [[v:count ? 'j' : 'gj']], { noremap = true, expr = true })
 vim.keymap.set("n", "k", [[v:count ? 'k' : 'gk']], { noremap = true, expr = true })
+
+
+-- 视觉模式，单行或多行移动
+vim.keymap.set("v","J",":m '>+1<CR>gv=gv")
+vim.keymap.set("v","K",":m '<-2<CR>gv=gv")
+
+--取消高亮
+vim.keymap.set("n","<leader>nh",":nohl<CR>")
+
+

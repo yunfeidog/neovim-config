@@ -1,14 +1,12 @@
 local set = vim.o
 set.number = true
-set.number = true
 set.encoding = "UTF-8"
 set.relativenumber = true --相对行号
 set.cursorline = true     --高亮所在行
 
 
-
-set.clipboard = "unnamed" -- 为了和系统剪切板一致
-set.mouse = 'a'           --所有模式下都可以使用鼠标
+set.clipboard = "unnamedplus" -- 为了和系统剪切板一致
+set.mouse = 'a'               --所有模式下都可以使用鼠标
 
 -- tab
 set.tabstop = 4      -- 这个选项设置 Tab 键在视觉上占用的空格数。
@@ -21,6 +19,15 @@ set.incsearch = true  --输入关键字的时候就开始搜索
 set.ignorecase = true -- 搜索时候忽略大小写
 set.smartcase = true  --搜索时,如果包含大写字母,则区分大小写。
 
+-- 设置默认新窗口在右边和下面
+set.splitright = true
+set.splitbelow = true
+
+
+-- 开启颜色 和左侧边栏
+set.termguicolors = true
+set.signcolumn = "yes"
+
 
 -- 在 copy 后高亮
 vim.api.nvim_create_autocmd({ "TextYankPost" }, {
@@ -31,5 +38,3 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
         })
     end,
 })
-
-vim.o.termguicolors = true
