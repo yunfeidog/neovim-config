@@ -15,7 +15,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-
     -- Vscode-like pictograms
     {
         "onsails/lspkind.nvim",
@@ -101,7 +100,7 @@ require("lazy").setup({
             { "<leader>q",  ":Telescope oldfiles<CR>",   desc = "oldfiles" },
         },
         "nvim-telescope/telescope.nvim",
-        tag = "0.1.1",
+        tag = "0.1.4",
         -- or                              , branch = '0.1.1',
         dependencies = { "nvim-lua/plenary.nvim" },
     },
@@ -173,7 +172,8 @@ autocmd FileType nerdtree setlocal relativenumber
     },
 })
 
-vim.cmd.colorscheme("base16-snazzy")
+vim.cmd.colorscheme("base16-materia")
+
 
 
 -- =============================================================null-ls格式化的配置=============================================================
